@@ -42,7 +42,7 @@ set linebreak                           " only wrap after words, not inside word
 set cursorline                          " highlight the current line
 set cursorcolumn                        " highlight the current column
 set completeopt=menu,longest,preview    " options for insert mode completion
-set spell                               " enable spell check by default
+"set spell                               " enable spell check by default
 
 set tabstop=4                           " number of spaces that a tab counts for
 set shiftwidth=4                        " number of spaces to use for each step of indent
@@ -53,9 +53,6 @@ set autoindent                          " automatically indent a new line
 set formatoptions+=r                    " automatic formatting: auto insert current comment leader after enter
 set virtualedit=block,onemore           " allow cursor after end of line in visual block mode and allow cursor one char after line end
 set display+=lastline                   " display wrapped lines at bottom instead of @ symbols
-if v:version > '702'
-    set colorcolumn=80,120              " show a vertical line at these positions
-endif
 set fillchars=vert:\ ,fold:\            " fill vertical splitlines with spaces instead of the ugly |-char; Default - for folds
 
 set diffopt+=iwhite                     " diff options: ignore whitespace
@@ -70,9 +67,9 @@ set noswapfile                          " disable swap files, most of the time t
 set nobackup                            " don't make a (permanent) backup when saving files
 set writebackup                         " make a (temporary) backup while saving files
 set backupcopy=yes                      " make a copy and overwrite the original file
-set undofile                        " save undo history to an external file
-set undodir=~/.vimundo,.,/tmp       " where to save undo history files
-set relativenumber                  " use relative line numbering
+set noundofile                          " don't save undo history to an external file
+"set undodir=~/.vimundo,.,/tmp           " where to save undo history files
+set relativenumber                      " use relative line numbering
 set signcolumn=number                   " merge signs-gutter and numbers-bar
 set cryptmethod=blowfish2               " use stronger blowfish encryption algorithm
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
