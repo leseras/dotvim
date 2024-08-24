@@ -107,6 +107,8 @@ autocmd Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l
 
 autocmd BufRead,BufNewFile *.{profile,install,test} setlocal filetype=php
 
+" git blame information
+nnoremap <leader>s :call gitblame#echo()<CR>
 " load the matchit script
 runtime! macros/matchit.vim
 

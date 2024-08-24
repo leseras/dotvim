@@ -117,6 +117,8 @@ Plug 'SirVer/ultisnips'
 
 Plug 'hashivim/vim-terraform'
 
+Plug 'zivyangll/git-blame.vim'
+
 Plug 'mtdl9/vim-log-highlighting'
 
 Plug 'TaDaa/vimade'
