@@ -1,4 +1,3 @@
-" first some settings copied from Debian config
 set nocompatible                        " no compatibility with old-skool vi
 set backspace=indent,eol,start          " define behavior of backspace key
 set history=1000                        " keep more history (was 50 in Debian config)
@@ -7,8 +6,8 @@ set history=1000                        " keep more history (was 50 in Debian co
 set encoding=utf-8                      " by default set the encoding to UTF-8
 set fileformats=unix,dos,mac            " also read mac files correctly, just in case we are dealing with that
 
-" then my own
 set nowrap                              " disable wrapping of text
+set clipboard=unnamedplus               " yank with y and CtrlV in other programs
 "set number                              " show line numbers by default
 set t_Co=256                            " force the terminal to use 256 colors
 let &t_ut=''                            " Set background color erase, so Vim works correctly in Kitty
