@@ -9,7 +9,7 @@ set fileformats=unix,dos,mac            " also read mac files correctly, just in
 
 " then my own
 set nowrap                              " disable wrapping of text
-set number                              " show line numbers by default
+"set number                              " show line numbers by default
 set t_Co=256                            " force the terminal to use 256 colors
 let &t_ut=''                            " Set background color erase, so Vim works correctly in Kitty
 let &t_SI = "\<Esc>[6 q"                " enable different cursors in terminal https://github.com/kovidgoyal/kitty/issues/2045#issuecomment-714295572
@@ -42,7 +42,7 @@ set linebreak                           " only wrap after words, not inside word
 set cursorline                          " highlight the current line
 set cursorcolumn                        " highlight the current column
 set completeopt=menu,longest,preview    " options for insert mode completion
-"set spell                               " enable spell check by default
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us " enable spell check for md files
 
 set tabstop=4                           " number of spaces that a tab counts for
 set shiftwidth=4                        " number of spaces to use for each step of indent
@@ -69,7 +69,7 @@ set writebackup                         " make a (temporary) backup while saving
 set backupcopy=yes                      " make a copy and overwrite the original file
 set noundofile                          " don't save undo history to an external file
 "set undodir=~/.vimundo,.,/tmp           " where to save undo history files
-set relativenumber                      " use relative line numbering
+"set relativenumber                      " use relative line numbering
 set signcolumn=number                   " merge signs-gutter and numbers-bar
 set cryptmethod=blowfish2               " use stronger blowfish encryption algorithm
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
